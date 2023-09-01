@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "San Francisco", Helvetica, Arial, sans-serif;
+  background-color: #1c1c1c;
+  color: #e5e5e5;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+* ::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+* ::-webkit-scrollbar-thumb {
+  background: #696969;
+  border-radius: 4rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 100%;
+  position: fixed;
+  width: 100%;
+  gap: 3rem;
+  font-size: 1rem;
+  z-index: 2;
+}
+
+.nav-list {
+  text-decoration: none;
+}
+.nav-list.active {
+  color: #a25fff;
+  transition: 0.3s;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.home .name {
+  font-size: 2.6rem;
+}
+.home .rohan {
+  color: #a25fff;
+  font-weight: 600;
+}
+.home .title {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.4rem;
+  padding: 1rem 0rem;
+  font-weight: 600;
+}
+.home .desc {
+  text-align: center;
+  margin: 2vh 18vw;
+  line-height: 1.4em;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  word-spacing: 0.2rem;
+}
+.home .button {
+  outline: none;
+  height: 2rem;
+  width: 4rem;
+  border: none;
+  cursor: pointer;
+}
+
+.tech-stack {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 0rem;
+}
+.tech-stack .image {
+  height: 40px;
+  width: 40px;
+  transition: 0.3s;
+}
+
+.terminal {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 20rem;
+  width: 100%;
+}
+.footer .s1 p {
+  font-size: 2rem;
+}
+.footer .s1 #auther {
+  font-size: 1rem;
+  text-align: right;
+}
+.footer .s2 ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  gap: 2rem;
+}
+.footer .s3 {
+  justify-self: flex-end;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  padding-top: 8rem;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 28rem;
+  width: 100%;
+  border: 2px solid rgba(105, 105, 105, 0.1882352941);
+  width: auto;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 24px;
+}
+.card .card-content {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: auto;
+  width: auto;
+}
+.card .card-content .card-image {
+  position: relative;
+  border-radius: 8px;
+  height: auto;
+  width: 19.5rem;
+}
+.card .title {
+  font-size: 1.2rem;
+  margin: 1rem 0rem;
+  color: #a25fff;
+  text-transform: capitalize;
+}
+.card .desc {
+  width: 18rem;
+}
+.card .buttons {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+.card .buttons .button {
+  border: none;
+  outline: none;
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: capitalize;
+  border-radius: 0.5rem;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,220 @@
+$apple: "San Francisco", Helvetica, Arial, sans-serif;
+$prompt: "Prompt", sans-serif;
+$varela: "Varela Round";
+$color: #e5e5e5;
+$backgroundColor: #1c1c1c;
+$h5: 1rem;
+$purple: #a25fff;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $apple;
+  background-color: $backgroundColor;
+  color: $color;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #696969;
+    border-radius: 4rem;
+  }
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-col {
+  display: flex;
+  flex-direction: column;
+}
+@mixin justify-content($baker) {
+  justify-content: $baker;
+}
+
+@mixin flex($flexDirection, $height, $justify, $align) {
+  display: flex;
+  flex-direction: $flexDirection;
+  justify-content: $justify;
+  align-items: $align;
+  height: $height;
+  width: 100%;
+}
+
+@mixin sm($key, $value) {
+  @media (390px <= width <= 780px) {
+  }
+}
+//==========|| Navbar ||==========//
+.nav {
+  @include flex(row, 4rem, center, center);
+  position: fixed;
+  width: 100%;
+  gap: 3rem;
+  font-size: $h5;
+  z-index: 2;
+}
+
+.nav-list {
+  text-decoration: none;
+  &.active {
+    color: $purple;
+    transition: 0.3s;
+  }
+}
+
+//==========|| HomePage ||==========//
+.home {
+  @include flex-col;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  .name {
+    font-size: 2.6rem;
+  }
+
+  .rohan {
+    color: $purple;
+    font-weight: 600;
+  }
+
+  .title {
+    @include flex-row;
+    font-size: 1.4rem;
+    padding: 1rem 0rem;
+    font-weight: 600;
+  }
+
+  .desc {
+    text-align: center;
+    margin: 2vh 18vw;
+    line-height: 1.4em;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    word-spacing: 0.2rem;
+  }
+  .button {
+    outline: none;
+    height: 2rem;
+    width: 4rem;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.tech-stack {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 0rem;
+
+  .image {
+    height: 40px;
+    width: 40px;
+    transition: 0.3s;
+  }
+}
+
+.terminal {
+  @include flex-col;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80vh;
+  width: 100%;
+}
+
+//==========|| Footer ||==========//
+.footer {
+  @include flex-col;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 20rem;
+  width: 100%;
+
+  .s1 {
+    p {
+      font-size: 2rem;
+    }
+    #auther {
+      font-size: 1rem;
+      text-align: right;
+    }
+  }
+  .s2 ul {
+    @include flex-row;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 2rem;
+  }
+  .s3 {
+    justify-self: flex-end;
+  }
+}
+
+.project {
+  @include flex(row, auto, center, center);
+  padding-top: 8rem;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.card {
+  @include flex(column, 28rem, space-between, flex-start);
+  border: 2px solid #69696930;
+  width: auto;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 24px;
+  .card-content {
+    object-fit: contain;
+    height: auto;
+    width: auto;
+    .card-image {
+      position: relative;
+      border-radius: 8px;
+      height: auto;
+      width: calc(20rem - 0.5rem);
+    }
+  }
+  .title {
+    font-size: 1.2rem;
+    margin: 1rem 0rem;
+    color: #a25fff;
+    text-transform: capitalize;
+  }
+  .desc {
+    width: 18rem;
+  }
+  .buttons {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    list-style-type: none;
+    @include flex(row, auto, flex-start, center);
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    .button {
+      border: none;
+      outline: none;
+      font-size: 0.9em;
+      color: #ffffff99;
+      text-transform: capitalize;
+      border-radius: 0.5rem;
+    }
+  }
+}
