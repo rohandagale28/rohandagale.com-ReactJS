@@ -3,6 +3,7 @@ import { Card } from './Card'
 import { Data } from './Data'
 
 export const Project = () => {
+    document.title = "RohanDagale - Project"
     return (
         <>
             <div className="project">

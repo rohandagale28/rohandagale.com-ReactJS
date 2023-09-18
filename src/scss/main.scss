@@ -1,26 +1,31 @@
 $apple: "San Francisco", Helvetica, Arial, sans-serif;
 $prompt: "Prompt", sans-serif;
 $varela: "Varela Round";
+$google: 'Google Sans Text,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji"';
+$terminal: "'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace";
 $color: #e5e5e5;
 $backgroundColor: #1c1c1c;
-$h5: 1rem;
+$h5: 1.1rem;
 $purple: #a25fff;
 
 * {
   margin: 0;
   padding: 0;
   font-family: $apple;
-  background-color: $backgroundColor;
+  // background-color: $backgroundColor;
   color: $color;
   font-size: 100%;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
     background-color: transparent;
   }
+  ::-webkit-scrollbar-track {
+    background: hsla(2, 0%, 0%, 1);
+  }
   ::-webkit-scrollbar-thumb {
-    background: #696969;
+    background: #505050;
     border-radius: 4rem;
   }
 }
@@ -54,6 +59,9 @@ $purple: #a25fff;
 //==========|| Navbar ||==========//
 .nav {
   @include flex(row, 4rem, center, center);
+  background-color: #1c1c1c;
+  background: rgba(14, 14, 14, 0.8);
+  backdrop-filter: blur(12px);
   position: fixed;
   width: 100%;
   gap: 3rem;
@@ -72,41 +80,50 @@ $purple: #a25fff;
 //==========|| HomePage ||==========//
 .home {
   @include flex-col;
-  height: 90vh;
+  background: url("../assets//milkeyway.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  .section1 {
+    height: 90vh;
+    @include flex-col;
+    justify-content: center;
+    align-items: center;
+    .name {
+      font-size: 2.6rem;
+    }
 
-  .name {
-    font-size: 2.6rem;
-  }
+    .rohan {
+      color: $purple;
+      font-weight: 600;
+    }
 
-  .rohan {
-    color: $purple;
-    font-weight: 600;
-  }
+    .title {
+      @include flex-row;
+      font-size: 1.4rem;
+      padding: 1rem 0rem;
+      font-weight: 600;
+    }
 
-  .title {
-    @include flex-row;
-    font-size: 1.4rem;
-    padding: 1rem 0rem;
-    font-weight: 600;
-  }
-
-  .desc {
-    text-align: center;
-    margin: 2vh 18vw;
-    line-height: 1.4em;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-    word-spacing: 0.2rem;
-  }
-  .button {
-    outline: none;
-    height: 2rem;
-    width: 4rem;
-    border: none;
-    cursor: pointer;
+    .desc {
+      text-align: center;
+      margin: 2vh 18vw;
+      line-height: 1.4em;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+      word-spacing: 0.2rem;
+    }
+    .button {
+      outline: none;
+      height: 2rem;
+      width: 4rem;
+      border: none;
+      cursor: pointer;
+    }
   }
 }
 
@@ -126,28 +143,32 @@ $purple: #a25fff;
 }
 
 .terminal {
+  font-family: $google;
   @include flex-col;
   justify-content: flex-start;
   align-items: center;
   height: 80vh;
   width: 100%;
+  background-color: #000;
 }
 
 //==========|| Footer ||==========//
 .footer {
   @include flex-col;
+  background-color: #000;
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  height: 20rem;
+  height: 18rem;
   width: 100%;
+  position: relative;
 
   .s1 {
     p {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
     #auther {
-      font-size: 1rem;
+      font-size: 0.9rem;
       text-align: right;
     }
   }
@@ -165,6 +186,7 @@ $purple: #a25fff;
 
 .project {
   @include flex(row, auto, center, center);
+  background-color: #101010;
   padding-top: 8rem;
   gap: 4rem;
   flex-wrap: wrap;
@@ -176,11 +198,14 @@ a {
 }
 .card {
   @include flex(column, 28rem, space-between, flex-start);
-  border: 2px solid #69696930;
   width: auto;
   padding: 16px;
   box-sizing: border-box;
   border-radius: 24px;
+  outline: 2px solid #69696940;
+  &:hover {
+    outline: 2px solid #2997ff;
+  }
   .card-content {
     object-fit: contain;
     height: auto;
@@ -215,6 +240,67 @@ a {
       color: #ffffff99;
       text-transform: capitalize;
       border-radius: 0.5rem;
+    }
+  }
+}
+
+//==========|| TechStack Page ||==========//
+.techstack {
+  height: auto;
+  width: 100%;
+  background-color: #101010;
+  @include flex-row;
+  padding-top: 26vh;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  gap: 0.8rem;
+  row-gap: 2rem;
+  flex-wrap: wrap;
+  padding-bottom: 40vh;
+
+  .tech {
+    width: 260px;
+    height: 80px;
+    border-radius: 12px;
+    cursor: pointer;
+    @include flex-row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    outline: 2px solid transparent;
+
+    &:hover {
+      outline: 2px solid #2997ff;
+    }
+    &:active {
+      outline: 2px solid #2997ff;
+    }
+
+    .image {
+      height: auto;
+      width: 40px;
+    }
+
+    .left {
+      padding-left: 1rem;
+    }
+    .right {
+      padding-left: 1rem;
+      padding-right: 4px;
+      @include flex-col;
+      gap: 4px;
+
+      :nth-child(1) {
+        font-size: 1.1rem;
+        text-transform: capitalize;
+      }
+      :nth-child(2) {
+        font-size: 0.9rem;
+        color: #999999;
+        text-transform: lowercase;
+      }
     }
   }
 }

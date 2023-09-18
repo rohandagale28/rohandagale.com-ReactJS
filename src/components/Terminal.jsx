@@ -36,7 +36,7 @@ export function Terminal() {
     };
 
     return (
-        <div style={{ height: "24rem", width: "60vw", outline: "2px solid #69696969", borderRadius: "8px" }}>
+        <div style={{ height: "24rem", width: "60vw", outline: "2px solid #69696969", borderRadius: "8px", backdropFilter: "blur(8px)"}}>
             <ReactTerminal
                 prompt={
                     "$user/rohan/dev >>"

@@ -27,7 +27,7 @@ export const Data = [
     },
     {
         id: 3,
-        image: <weatherImg />,
+        image: weatherImg,
         title: "weather API",
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis itaque tempora aut ullam delectus obcaecati eveniet deleniti reprehenderit iusto explicabo accusantium, minus a eaque officiis placeat? Tenetur officiis nesciunt illum?",
         tech: ["nextJS, Express, REST API, Redux"]

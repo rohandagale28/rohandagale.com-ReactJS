@@ -15,13 +15,14 @@ export const Footer = () => {
                 </div>
                 <div className="s2">
                     <ul>
-                        <li><a href="" target='_blank'><InstagramIcon sx={{ fontSize: "2rem" }} /></a></li>
-                        <li><a href="" target='_blank'><GitHubIcon sx={{ fontSize: "2rem" }} /></a></li>
-                        <li><a href="" target='_blank'><LinkedInIcon sx={{ fontSize: "2rem" }} /></a></li>
-                        <li><a href="" target='_blank'><MailIcon sx={{ fontSize: "2rem" }} /></a></li>
-                        <li><a href="" target='_blank'><TwitterIcon sx={{ fontSize: "2rem" }} /></a></li>
+                        <li><a href="https://www.instagram.com/rohan_dagle28/" target='_blank'><InstagramIcon sx={{ fontSize: "1.8rem" }} /></a></li>
+                        <li><a href="https://github.com/rohandagale28" target='_blank'><GitHubIcon sx={{ fontSize: "1.8rem" }} /></a></li>
+                        <li><a href="https://www.linkedin.com/in/rohan-dagale-7b67461b3/" target='_blank'><LinkedInIcon sx={{ fontSize: "1.8rem" }} /></a></li>
+                        <li><a href="" target='_blank'><MailIcon sx={{ fontSize: "1.8rem" }} /></a></li>
+                        <li><a href="https://twitter.com/RohanDagal39605" target='_blank'><TwitterIcon sx={{ fontSize: "1.8rem" }} /></a></li>
                     </ul>
                 </div>
+                <div style={{ position: "absolute", bottom: "14px", color: "#999999", fontSize: ".880rem" }}>Copyright &copy; 2023 RohanDagale</div>
             </div >
         </>
     )

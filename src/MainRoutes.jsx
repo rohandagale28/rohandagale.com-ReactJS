@@ -2,6 +2,7 @@
 import { useRoutes } from "react-router-dom";
 import { Home } from "./HomePage/Home";
 import { Project } from "./ProjectPage/Project";
+import { TechStackPage } from "./TechStackPage/TechStackPage";
 
 //routing pages
 
@@ -15,8 +16,12 @@ export default function ThemeRoutes() {
             element: <Home />,
         },
         {
-            path: "/Project",
+            path: "/project",
             element: <Project />,
+        },
+        {
+            path: "/techstack",
+            element: <TechStackPage />,
         },
     ]);
 }

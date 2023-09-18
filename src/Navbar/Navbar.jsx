@@ -26,6 +26,11 @@ export const Navbar = () => {
                     </NavLink>
                 </div>
                 <div>
+                    <NavLink to="/techstack" className="nav-list">
+                        Tech Stack
+                    </NavLink>
+                </div>
+                <div>
                     <NavLink to="/disa" className="nav-list" style={{ cursor: "not-allowed" }}>
                         Disabled
                     </NavLink>

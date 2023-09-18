@@ -1,35 +1,21 @@
 import React from 'react'
-import Stack from "./Stack"
 import { TerminalSreen } from './TerminalSreen'
+import Section1 from './Section1'
 
 export const Home = () => {
-    const [show, setShow] = React.useState(false)
-    console.log(show)
+    document.title = "RohanDagale"
+
     return (
         <>
             <div className="home">
-                <div className='name'>
-                    Hello, <span className="rohan">Rohan Here</span>
+                <div className='section1'>
+                    <Section1 />
                 </div>
-                <div className='title' onClick={() => setShow(!show)}>
-                    {show == false ? (
-                        <>
-                            I'm a<span className="rohan">&nbsp;Web Developer</span>
-                        </>
-                    ) : (
-                        <>
-                            Nahh!... I'm {" "}<span className="rohan">&nbsp;Just Lazy</span>
-                        </>
-                    )}
-                </div>
-                <div>
-                    <p className="desc">A passionate and dedicated software developer with a keen interest in crafting innovative digital solutions. I've had the privilege of working on a diverse range of projects that highlight my expertise in JavaScript, Framework like ReactJS and NextJS and Technologies like MongoDB, Supabase, GitHub version control and NodeJS</p>
-                </div>
-                <div className="tech-stack">
-                    <Stack />
+                <div className='section-2'>
+                    <TerminalSreen />
                 </div>
             </div>
-            <TerminalSreen />
+
         </>
     )
 }
